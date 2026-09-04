@@ -1,0 +1,73 @@
+iCluster-web Web Installer - IBM i Test Package
+================================================
+
+Purpose
+-------
+This package contains the web replacement for the original curses installer,
+its installer models, JSON wizard definitions, translations, and bundled RPM
+assets. It has been tested through the Install Services workflow on IBM i.
+
+Prerequisites
+-------------
+- IBM i PASE with /QOpenSys/pkgs/bin/bash and Python 3.6.
+- An IBM i profile with authority to install RPMs, create /opt/iCluster-web,
+  configure the database, and start services.
+- The iCluster-web product archive, normally named ricwebv941_ibmi.zip.
+- A trusted test network. The web server has no authentication.
+
+Transfer
+--------
+1. Transfer this ZIP to the IBM i in binary mode and extract it, for example
+   under /home/YOURUSER/icw-install.
+2. Transfer ricwebv941_ibmi.zip in binary mode to the tester's home directory,
+   or enter its actual path on the first wizard page.
+3. In a PASE shell:
+
+   cd /home/YOURUSER/icw-install
+   chmod +x run.sh
+
+Run
+---
+Start the install wizard:
+
+   ./run.sh install --host 0.0.0.0 --port 8090
+
+Open this URL from a browser on the trusted network:
+
+   http://IBM_I_HOST:8090/
+
+The launcher sets LIBPATH so psycopg2 can find PostgreSQL libpq, changes to the
+package directory, and starts web_app.py with all supplied arguments.
+
+Expected Install Services flow
+------------------------------
+1. Unzip iCluster-Web zip file
+2. Install dependent RPM packages
+3. Configure database and user
+4. Configure IP and ports
+5. Start services
+
+Each action streams output to the browser console. Wait for the green
+Succeeded status before selecting Next.
+
+Upgrade mode
+------------
+To test an upgrade instead:
+
+   ./run.sh upgrade --host 0.0.0.0 --port 8090
+
+Stopping and cleanup
+--------------------
+Press Ctrl+C in the PASE terminal to stop the web server. Use the installer's
+uninstall workflow before repeating a clean installation test because the
+Unzip action does not overwrite an existing /opt/iCluster-web directory.
+
+Troubleshooting
+---------------
+- Raw {"jobId": ...} in the browser means an old web_app.py is running. Stop
+  the server, upload this package again, restart it, and hard-refresh.
+- If libpq.so.5 cannot be loaded, verify this directory exists:
+  /QOpenSys/pkgs/lib/postgresql12/lib
+- If the browser cannot connect, verify the selected port is open and that the
+  server was started with --host 0.0.0.0.
+- Do not expose this test server to an untrusted network.

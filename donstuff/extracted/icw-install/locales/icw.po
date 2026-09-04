@@ -1,0 +1,481 @@
+# This file was generated from messages.xlsx
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-05-24 10:13+0000\n"
+"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: xls-to-po 1.0\n"
+
+msgid "\\nNot installed {pkg} \\nAre you sure continue?(Y/n) "
+msgstr "\\n{pkg} is not installed. \\nContinue? (Y/n) "
+
+msgid "Exit iCluster-web installer"
+msgstr "Exit iCluster-web installer."
+
+msgid "Dependent packages failed to install"
+msgstr "The dependent packages failed to install."
+
+msgid "Begin loading installer... \\n"
+msgstr "Begin loading the installer... \\n"
+
+msgid "Command not allowed"
+msgstr "This command is not allowed."
+
+msgid ""
+"The minimum size of terminal window is 138*33. \n"
+"Current terminal window size is {width}*{height}. \n"
+"Please increase the size of the terminal window and run again."
+msgstr ""
+"The minimum size of terminal window is 138*33, but the current terminal window size is {width}*{height}. \n"
+"Please increase the size of the terminal window and run the installer again."
+
+msgid ""
+"Running command in {agentIp}: \n"
+"{cmd}\n"
+msgstr ""
+"Running the following command in {agentIp}:\n"
+"{cmd}\n"
+
+msgid "The connection does not exist, please reconnect "
+msgstr "This connection does not exist. You must reconnect."
+
+msgid "The unzip file was not found, please unzip it again"
+msgstr ""
+"The unzip file was not found. Please make sure it exists and unzip it again."
+
+msgid "Begin uploading agent files"
+msgstr "Begin uploading the agent files."
+
+msgid "Upload agent files {filePath} to {targetfile}"
+msgstr "Upload the agent files from {filePath} to {targetfile}."
+
+msgid "Please manually execute the following command: "
+msgstr "Manually execute the following command: "
+
+msgid ""
+"\n"
+"Begin connecting to Agent host {pUser}@{agentIp}:{agentPort} "
+msgstr ""
+"\n"
+"Begin connecting to the agent host {pUser}@{agentIp}:{agentPort}."
+
+msgid "Connection succeeded."
+msgstr "The connection is successful."
+
+msgid "Connection failed."
+msgstr "The connection failed."
+
+msgid "unpack {name}"
+msgstr "Unpack the {name} file."
+
+msgid "list: {listStr}"
+msgstr "List: {listStr}"
+
+msgid "Detect file {envPath}"
+msgstr "Detect the {envPath} file."
+
+msgid "Agent profile template {envPath} read successfully"
+msgstr "The agent profile template {envPath} was read successfully."
+
+msgid ""
+"Failed to read Agent profile template {envPath} \n"
+" Please check the path and try again"
+msgstr ""
+"Failed to read the Agent profile template {envPath}. \n"
+"Verify the path and try again."
+
+msgid ""
+"PostgreSQL is running \n"
+"Press [Finish] button and select menu [2. Install services] to continue."
+msgstr ""
+"PostgreSQL is running. \n"
+"Press [Finish] and then select the [2. Install services] menu to continue."
+
+msgid ""
+"PostgreSQL is not running \n"
+"Press [Next] button to continue initialized database then start PostgreSQL."
+msgstr ""
+"PostgreSQL is not running. \n"
+"Press [Next] to continue initializing the database. Then start PostgreSQL."
+
+msgid "Extract the postgresql rpm package:"
+msgstr "Extract the PostgreSQL RPM package."
+
+msgid "The \"{zipPath}\" file to extract does not exist"
+msgstr "The \"{zipPath}\" file to extract does not exist."
+
+msgid "Extract : iCluster_dep.rpm.tar.gz"
+msgstr "Extract the iCluster_dep.rpm.tar.gz file."
+
+msgid "Extract : {item}"
+msgstr "Extract the {item} file."
+
+msgid ""
+"Postgres has been installed\n"
+"Skip the installation"
+msgstr ""
+"Postgres is already installed.\n"
+"Will skip the installation."
+
+msgid "Create user profile : POSTGRES "
+msgstr "Create the user profile of POSTGRES."
+
+msgid "DB data path :({pgdata}) exists but is not empty."
+msgstr "The DB ({pgdata}) data path exists but is not empty."
+
+msgid ""
+"*** Ssh Error: User profile and password do not match \n"
+"try again after modification\n"
+msgstr ""
+"*** SSH Error: The user profile and password do not match. \n"
+"Modify these values and try again.\n"
+
+msgid "Begin unpacking zip file:"
+msgstr "Begin unpacking the zip file:"
+
+msgid "Unzip:{zipPath} to {servicePath}/download"
+msgstr "Unzip the {zipPath} file to {servicePath}/download."
+
+msgid "Make dir:{unzipPath}"
+msgstr "Make the directory as: {unzipPath}"
+
+msgid "Successfully extract file {zipPath}\n"
+msgstr "Successfully extract the file {zipPath}.\n"
+
+msgid "iCluster_dep.rpm.tar.gz file not found\n"
+msgstr "The iCluster_dep.rpm.tar.gz file was not found.\n"
+
+msgid "iCluster-web-jar-v*.tar.gz file not found\n"
+msgstr "The iCluster-web-jar-v*.tar.gz file was not found.\n"
+
+msgid "iCluster-web_IBMi.tar.gz file not found\n"
+msgstr "The iCluster-web_IBMi.tar.gz file was not found.\n"
+
+msgid "Begin installing RPM packages:"
+msgstr "Begin installing the RPM packages."
+
+msgid "Extract tar {depRPMgz}:"
+msgstr "Extract the {depRPMgz} file."
+
+msgid "The rpm  tar.gz file  \"{depRPMgz}\" does not exist"
+msgstr "The RPM tar.gz file  \"{depRPMgz}\" does not exist."
+
+msgid "Begin unpacking {depRPMgz}"
+msgstr "Begin unpacking the {depRPMgz} file."
+
+msgid "Unpacked rpm: {rpms}\n"
+msgstr "Begin unpacking the RPM {rpms} file.\n"
+
+msgid "Begin installing RPM packages \n"
+msgstr "Begin installing the RPM packages.\n"
+
+msgid "Successfully install rpms"
+msgstr "RPMS was successfully installed."
+
+msgid "The iCluster-web IBMi tar.gz file  \"{webgz}\" does not exist"
+msgstr "The iCluster-web IBMi tar.gz file, \"{webgz}\", does not exist."
+
+msgid "Begin unpacking {webgz} to {servicePath}"
+msgstr "Begin unpacking the {webgz} file to {servicePath}."
+
+msgid "The {jarPkg} file  \"{jargz}\" does not exist"
+msgstr "The {jarPkg} file \"{jargz}\" does not exist."
+
+msgid "Begin unpacking {jargz} to {unzipPath}"
+msgstr "Begin unpacking the {jargz} file to {unzipPath}."
+
+msgid "End unpacking {jargz}"
+msgstr "The unpacking of the {jargz} file has ended."
+
+msgid "Replace jar gateway-1.0.jar"
+msgstr "Replace the gateway-1.0.jar file."
+
+msgid "Replace jar server-1.0.jar"
+msgstr "Replace the server-1.0.jar file."
+
+msgid "Begin unpacking static.tar.gz"
+msgstr "Begin unpacking the static.tar.gz file."
+
+msgid "End unpacking static.tar.gz"
+msgstr "The unpacking of the static.tar.gz file has ended."
+
+msgid "iCluster-web shell file not found\n"
+msgstr "The iCluster-web shell file was not found.\n"
+
+msgid "iCluster-web .env file not found\n"
+msgstr "The iCluster-web .env file was not found.\n"
+
+msgid "iCluster-web JAR files not found\n"
+msgstr "The iCluster-web JAR files were not found.\n"
+
+msgid "iCluster-web portal static files not found\n"
+msgstr "The iCluster-web portal static files were not found.\n"
+
+msgid "iCluster-web DB initialization script ({initSql}) not found\n"
+msgstr "The iCluster-web DB initialization script ({initSql}) was not found.\n"
+
+msgid ""
+"\n"
+"Begin running Redis service "
+msgstr ""
+"\n"
+"Begin running the Redis service."
+
+msgid "The file {redisConfig} does not exist"
+msgstr "The {redisConfig} file does not exist."
+
+msgid "Replace file {redisConfig} with {redisTmpl} "
+msgstr "Replace the {redisConfig} file with the {redisTmpl} file."
+
+msgid "Create dir {redisVar} "
+msgstr "Create the {redisVar} directory."
+
+msgid "Redis service is not running."
+msgstr "The Redis service is not running."
+
+msgid "Redis service [PID:{pid}] is running."
+msgstr "The Redis service [PID:{pid}] is running."
+
+msgid ""
+"\n"
+"Begin running Keycloak service "
+msgstr ""
+"\n"
+"Begin running the Keycloak service."
+
+msgid "Keycloak service [PID:{pid}] is running on port {KEYCLOAK_PORT}."
+msgstr "The Keycloak service [PID:{pid}] is running on the {KEYCLOAK_PORT}."
+
+msgid "Failed to start Keycloak service on port {KEYCLOAK_PORT}."
+msgstr "The Keycloak service failed to start on the {KEYCLOAK_PORT}."
+
+msgid ""
+"\n"
+"Connecting to {ip}:{port}:"
+msgstr ""
+"\n"
+"Connecting to the {ip}:{port}:"
+
+msgid ""
+"\n"
+"\n"
+"Begin running Nginx "
+msgstr ""
+"\n"
+"\n"
+"Begin running Nginx."
+
+msgid "Create iCW nginx config portal/icluster.conf"
+msgstr "Create the iCluster-web nginx config portal/icluster.conf file."
+
+msgid "cp {servicePath}/portal/nginx.conf to {nginxConfPath}"
+msgstr "Create the nginx config {nginxConfPath}."
+
+msgid "Create dir {Path} "
+msgstr "Create the {Path} directory."
+
+msgid "Make nginx var path: {nginxVarPath}"
+msgstr "Make the nginx var path: {nginxVarPath}"
+
+msgid "Start nginx"
+msgstr "Start nginx."
+
+msgid "Nginx service [PID:{pid}] is running on port {PORTAL_PORT}."
+msgstr "The Nginx service [PID:{pid}] is running on {PORTAL_PORT}."
+
+msgid "Failed to start Nginx service on port {PORTAL_PORT}."
+msgstr "The Nginx service failed to start on {PORTAL_PORT}."
+
+msgid ""
+"\n"
+"Will start following services :\n"
+" Redis \n"
+" Nginx \n"
+" Keycloak\n"
+" Registry\n"
+" Gateway\n"
+" Server"
+msgstr ""
+"\n"
+"The following services will start:\n"
+" Redis \n"
+" Nginx \n"
+" Keycloak\n"
+" Registry\n"
+" Gateway\n"
+" Server"
+
+msgid ""
+"\n"
+"Begin running iCluster-web core services "
+msgstr ""
+"\n"
+"Begin running the iCluster-web core services."
+
+msgid "Registry [PID:{pid}] is running on port {REGISTRY_PORT}."
+msgstr "Registry [PID:{pid}] is running on {REGISTRY_PORT}."
+
+msgid "Failed to start Registry service on port {REGISTRY_PORT}."
+msgstr "The Registry service failed to start on {REGISTRY_PORT}."
+
+msgid "Gateway [PID:{pid}] is running on port {GATEWAY_PORT}."
+msgstr "Gateway [PID:{pid}] is running on {GATEWAY_PORT}."
+
+msgid "Failed to start Gateway service on port {GATEWAY_PORT}."
+msgstr "The Gateway service failed to start on {GATEWAY_PORT}."
+
+msgid "Server [PID:{pid}] is running on port {SERVER_PORT}."
+msgstr "Server [PID:{pid}] is running on {SERVER_PORT}."
+
+msgid "Failed to start Server service on port {SERVER_PORT}."
+msgstr "The Server service failed to start on {SERVER_PORT}."
+
+msgid "Services start complete!"
+msgstr "Start services is complete!"
+
+msgid "Following {failed_count} services start failed:"
+msgstr "The following {failed_count} services failed to start:"
+
+msgid ""
+"\n"
+"iCluster-web .env file not found"
+msgstr ""
+"\n"
+"The iCluster-web .env file was not found."
+
+msgid ""
+"Run command in remote: \n"
+"{cmd}\n"
+msgstr ""
+"Run the following command in remote: \n"
+"{cmd}\n"
+
+msgid ""
+"\n"
+"Begin stopping iCluster-web services "
+msgstr ""
+"\n"
+"Begin stopping the iCluster-web services."
+
+msgid ""
+"\n"
+"iCluster-web services stopped"
+msgstr ""
+"\n"
+"iCluster-web services have stopped."
+
+msgid ""
+"\n"
+"Begin stopping Keycloak "
+msgstr ""
+"\n"
+"Begin stopping Keycloak."
+
+msgid ""
+"\n"
+"Keycloak stopped"
+msgstr ""
+"\n"
+"Keycloak has stopped."
+
+msgid ""
+"\n"
+"Begin stopping Redis "
+msgstr ""
+"\n"
+"Begin stopping Redis."
+
+msgid ""
+"\n"
+"Redis stopped"
+msgstr ""
+"\n"
+"Redis has stopped."
+
+msgid ""
+"\n"
+"Begin stopping Nginx "
+msgstr ""
+"\n"
+"Begin stopping Nginx."
+
+msgid ""
+"\n"
+"Nginx stopped"
+msgstr ""
+"\n"
+"Nginx has stopped."
+
+msgid ""
+"\n"
+"Begin stopping PostgreSQL "
+msgstr ""
+"\n"
+"Begin stopping PostgreSQL."
+
+msgid ""
+"\n"
+"PostgreSQL stopped"
+msgstr ""
+"\n"
+"PostgreSQL stopped."
+
+msgid ""
+"\n"
+"Begin removing iCluster-web "
+msgstr ""
+"\n"
+"Begin removing iCluster-web."
+
+msgid ""
+"\n"
+"iCluster-web removed"
+msgstr ""
+"\n"
+"iCluster-web is removed."
+
+msgid ""
+"\n"
+"Begin removing PostgreSQL data"
+msgstr ""
+"\n"
+"Begin removing PostgreSQL data."
+
+msgid ""
+"\n"
+"PostgreSQL data removed"
+msgstr ""
+"\n"
+"PostgreSQL data is removed."
+
+msgid "Select Error:"
+msgstr "Select Error:"
+
+msgid ""
+"\n"
+"Begin uninstalling RPMs "
+msgstr ""
+"\n"
+"Begin uninstalling RPMs."
+
+msgid ""
+"\n"
+"Begin uninstalling Redis "
+msgstr ""
+"\n"
+"Begin uninstalling Redis."
+
+msgid ""
+"\n"
+"Begin uninstalling Nginx "
+msgstr ""
+"\n"
+"Begin uninstalling Nginx."
+
+msgid ""
+"\n"
+"Begin uninstalling PostgreSQL "
+msgstr ""
+"\n"
+"Begin uninstalling PostgreSQL."

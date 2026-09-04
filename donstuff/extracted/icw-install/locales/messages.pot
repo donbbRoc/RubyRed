@@ -1,0 +1,531 @@
+# Translations template for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-05-10 02:44+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: /home/CLIU/icw_installation/icw-install/build.py:94
+msgid "\\nNot installed {pkg} \\nAre you sure continue?(Y/n) "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/build.py:98
+msgid "Exit iCluster-web installer"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/build.py:102
+msgid "Dependent packages failed to install"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/build.py:106
+msgid "Begin loading installer... \\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/build.py:110
+msgid "Command not allowed"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/frame.py:115
+msgid ""
+"The minimum size of terminal window is 138*33. \n"
+"Current terminal window size is {width}*{height}. \n"
+"Please increase the size of the terminal window and run again."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:224
+msgid ""
+"Running command in {agentIp}: \n"
+"{cmd}\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:257
+msgid "The connection does not exist, please reconnect "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:261
+msgid "The unzip file was not found, please unzip it again"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:264
+msgid "Begin uploading agent files"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:284
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:394
+msgid "Upload agent files {filePath} to {targetfile}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:322
+msgid "Please manually execute the following command: "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:354
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:371
+msgid ""
+"\n"
+"Begin connecting to Agent host {pUser}@{agentIp}:{agentPort} "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:398
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:382
+msgid "Connection succeeded."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:418
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:426
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:437
+msgid "Connection failed."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:469
+msgid "unpack {name}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:475
+msgid "list: {listStr}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:478
+msgid "Detect file {envPath}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:484
+msgid "Agent profile template {envPath} read successfully"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/agent_model.py:493
+msgid ""
+"Failed to read Agent profile template {envPath} \n"
+" Please check the path and try again"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:292
+msgid ""
+"PostgreSQL is running \n"
+"Press [Finish] button and select menu [2. Install services] to continue."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:296
+msgid ""
+"PostgreSQL is not running \n"
+"Press [Next] button to continue initialized database then start "
+"PostgreSQL."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:332
+msgid "Extract the postgresql rpm package:"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:339
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:271
+msgid "The \"{zipPath}\" file to extract does not exist"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:343
+msgid "Extract : iCluster_dep.rpm.tar.gz"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:355
+msgid "Extract : {item}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:425
+msgid ""
+"Postgres has been installed\n"
+"Skip the installation"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:548
+msgid "Create user profile : POSTGRES "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:578
+msgid "DB data path :({pgdata}) exists but is not empty."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/postgres_tools.py:594
+msgid ""
+"*** Ssh Error: User profile and password do not match \n"
+"try again after modification\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:262
+msgid "Begin unpacking zip file:"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:268
+msgid "Unzip:{zipPath} to {servicePath}/download"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:275
+msgid "Make dir:{unzipPath}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:280
+msgid "Successfully extract file {zipPath}\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:285
+msgid "iCluster_dep.rpm.tar.gz file not found\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:289
+msgid "iCluster-web-jar-v*.tar.gz file not found\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:293
+msgid "iCluster-web_IBMi.tar.gz file not found\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:364
+msgid "Begin installing RPM packages:"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:368
+msgid "Extract tar {depRPMgz}:"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:370
+msgid "The rpm  tar.gz file  \"{depRPMgz}\" does not exist"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:373
+msgid "Begin unpacking {depRPMgz}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:378
+msgid "Unpacked rpm: {rpms}\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:380
+msgid "Begin installing RPM packages \n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:392
+msgid "Successfully install rpms"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:412
+msgid "The iCluster-web IBMi tar.gz file  \"{webgz}\" does not exist"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:415
+msgid "Begin unpacking {webgz} to {servicePath}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:462
+msgid "The {jarPkg} file  \"{jargz}\" does not exist"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:465
+msgid "Begin unpacking {jargz} to {unzipPath}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:468
+msgid "End unpacking {jargz}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:470
+msgid "Replace jar gateway-1.0.jar"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:472
+msgid "Replace jar server-1.0.jar"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:477
+msgid "Begin unpacking static.tar.gz"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:480
+msgid "End unpacking static.tar.gz"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:485
+msgid "iCluster-web shell file not found\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:489
+msgid "iCluster-web .env file not found\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:493
+msgid "iCluster-web JAR files not found\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:497
+msgid "iCluster-web portal static files not found\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:571
+msgid "iCluster-web DB initialization script ({initSql}) not found\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:678
+msgid ""
+"\n"
+"Begin running Redis service "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:681
+msgid "The file {redisConfig} does not exist"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:682
+msgid "Replace file {redisConfig} with {redisTmpl} "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:686
+msgid "Create dir {redisVar} "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:698
+msgid "Redis service is not running."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:701
+msgid "Redis service [PID:{pid}] is running."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:708
+msgid ""
+"\n"
+"Begin running Keycloak service "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:718
+msgid "Keycloak service [PID:{pid}] is running on port {KEYCLOAK_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:721
+msgid "Failed to start Keycloak service on port {KEYCLOAK_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:729
+msgid ""
+"\n"
+"Connecting to {ip}:{port}:"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:750
+msgid ""
+"\n"
+"\n"
+"Begin running Nginx "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:752
+msgid "Create iCW nginx config portal/icluster.conf"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:758
+msgid "cp {servicePath}/portal/nginx.conf to {nginxConfPath}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:769
+msgid "Create dir {Path} "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:774
+msgid "Make nginx var path: {nginxVarPath}"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:778
+msgid "Start nginx"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:784
+msgid "Nginx service [PID:{pid}] is running on port {PORTAL_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:787
+msgid "Failed to start Nginx service on port {PORTAL_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:798
+msgid ""
+"\n"
+"Will start following services :\n"
+" Redis \n"
+" Nginx \n"
+" Keycloak\n"
+" Registry\n"
+" Gateway\n"
+" Server"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:804
+msgid ""
+"\n"
+"Begin running iCluster-web core services "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:814
+msgid "Registry [PID:{pid}] is running on port {REGISTRY_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:817
+msgid "Failed to start Registry service on port {REGISTRY_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:823
+msgid "Gateway [PID:{pid}] is running on port {GATEWAY_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:826
+msgid "Failed to start Gateway service on port {GATEWAY_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:832
+msgid "Server [PID:{pid}] is running on port {SERVER_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:835
+msgid "Failed to start Server service on port {SERVER_PORT}."
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:838
+msgid "Services start complete!"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:841
+msgid "Following {failed_count} services start failed:"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/server_model.py:852
+msgid ""
+"\n"
+"iCluster-web .env file not found"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:336
+msgid ""
+"Run command in remote: \n"
+"{cmd}\n"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:439
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:446
+msgid ""
+"\n"
+"Begin stopping iCluster-web services "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:449
+msgid ""
+"\n"
+"iCluster-web services stopped"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:452
+msgid ""
+"\n"
+"Begin stopping Keycloak "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:460
+msgid ""
+"\n"
+"Keycloak stopped"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:463
+msgid ""
+"\n"
+"Begin stopping Redis "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:472
+msgid ""
+"\n"
+"Redis stopped"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:475
+msgid ""
+"\n"
+"Begin stopping Nginx "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:484
+msgid ""
+"\n"
+"Nginx stopped"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:487
+msgid ""
+"\n"
+"Begin stopping PostgreSQL "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:496
+msgid ""
+"\n"
+"PostgreSQL stopped"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:500
+msgid ""
+"\n"
+"Begin removing iCluster-web "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:509
+msgid ""
+"\n"
+"iCluster-web removed"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:512
+msgid ""
+"\n"
+"Begin removing PostgreSQL data"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:521
+msgid ""
+"\n"
+"PostgreSQL data removed"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:577
+msgid "Select Error:"
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:602
+msgid ""
+"\n"
+"Begin uninstalling RPMs "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:625
+msgid ""
+"\n"
+"Begin uninstalling Redis "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:635
+msgid ""
+"\n"
+"Begin uninstalling Nginx "
+msgstr ""
+
+#: /home/CLIU/icw_installation/icw-install/tools/uninstall_model.py:646
+msgid ""
+"\n"
+"Begin uninstalling PostgreSQL "
+msgstr ""
+

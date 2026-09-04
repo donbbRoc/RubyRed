@@ -1,0 +1,15 @@
+
+1. 
+ pybabel extract -o messages.pot  DIR_SOURCE_PATH
+
+2. 
+ po-to-xls messages.po
+
+3. 
+ xls-to-po en messages.xlsx icw.po
+
+4. 
+ pybabel compile -i ./icw.po -D icw -o icw.mo
+
+5.
+ cp icw.mo /home/CLIU/icw_installation/icw-install/locales/en/LC_MESSAGES/

@@ -1,0 +1,153 @@
+
+{
+    "name": "ICW_install_cfg",
+    "label": "iCluster-web installation",
+    "version": 0.1,
+    "steps": [
+        {
+            "index":1,
+            "name":"1. Install services",
+            "model":"./tools/server_model.py",
+            "pages":[
+                {
+                    "name":"Unzip iCluster-Web zip file",
+                    "items":[
+                        {"label":"Installation path    : ", "type":"editbox", "editable":false, "maxlen":50, "valueOffset":25, "defaultValue":"/opt/iCluster-web", "modelprop":"servicePath"},
+                        {"label":"iCluster-web package : ", "type":"editbox", "maxlen":50, "valueOffset":25, "defaultValue":"~/ricwebv941_ibmi.zip", "modelprop":"zipPath"},
+                        {"label":" Unzip  ", "nextlabel":"  Next  ", "type":"button", "maxlen":32, "modelfunc":"unpackZipFile", "paramClass":"InstallServerParam", "output":15}
+                    ]
+                },
+                {
+                    "name":"Install dependent rpm packages",
+                    "items":[
+                        {"label":"Install RPM", "nextlabel":"  Next  ", "type":"button", "maxlen":32, "modelfunc":"installRPM", "paramClass":"InstallServerParam", "output":15}
+                    ]
+                },
+                {
+                    "name":"Configure database and user", 
+                    "items":[
+                        {"label":"Database IP : ", "type":"editbox", "maxlen":15, "valueOffset":25, "modelprop":"DATABASE_IP","editable": false,
+                            "defaultValue": "127.0.0.1", "regex":"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"},
+                        {"label":"User        : ", "type":"editbox", "maxlen":50, "valueOffset":25, "modelprop":"dbUser", "regex":".+"},
+                        {"label":"Password    : ", "type":"password", "maxlen":50, "valueOffset":25, "modelprop":"dbPwd", "placeholder":"XXXXXX", "regex":".+"},
+                        {"label":" Configure ", "nextlabel":" Next ", "type":"button", "maxlen":32, "modelfunc":"configureDatabase", "paramClass":"InstallServerParam", "output":15}
+                    ]
+                },
+                {
+                    "name":"Config IP and Port", 
+                    "items":[
+                        {"label":"Server IP     : ", "type":"editbox", "maxlen":15, "valueOffset":16, "modelprop":"SERVER_IP", "placeholder":"XXX.XXX.XXX.XXX", "regex":"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"},
+                        {"label":"Server Port   : ", "type":"editbox", "maxlen":5, "valueOffset":16, "modelprop":"SERVER_PORT", "defaultValue":8081, "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+                        {"label":"Registry Port : ", "type":"editbox", "maxlen":5, "valueOffset":16, "modelprop":"REGISTRY_PORT", "defaultValue":8761, "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+                        {"label":"Gateway Port  : ", "type":"editbox", "maxlen":5, "valueOffset":16, "modelprop":"GATEWAY_PORT", "defaultValue":8080, "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+                        {"label":"Portal Port   : ", "type":"editbox", "maxlen":5, "valueOffset":16, "modelprop":"PORTAL_PORT", "defaultValue":9000, "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+                        {"label":"  Save  ", "nextlabel":"  Next  ", "type":"button", "maxlen":32, "modelfunc":"saveProfile", "paramClass":"InstallServerParam"}
+                    ]
+                },
+                {
+                    "name":"Start services", 
+                    "items":[
+                        {"label":" Start  ", "nextlabel":" Finish ", "type":"button", "maxlen":32, "modelfunc":"runAllJar", "paramClass":"InstallServerParam", "output":15}
+                    ]
+                }
+            ]
+        },
+        {
+            "index":2,
+            "name":"2. Install agents",
+            "model":"./tools/agent_model.py",
+            "pages":[
+                {
+                    "name":"Unzip iCluster-agent zip file",
+                    "items":[
+                        {"label":"Installation path      : /opt/iCluster-agent", "type":"label", "maxlen":32},
+                        {"label":"iCluster-agent package : ", "type":"editbox", "maxlen":50, "valueOffset":25, "defaultValue":"~/ricwebv941_agent_ibmi.zip", "modelprop":"zipPath"},
+                        {"label":" Unzip  ", "nextlabel":"  Next  ", "type":"button", "maxlen":32, "modelfunc":"unpackZipFile", "paramClass":"InstallAgentParam", "output":15}
+                    ]
+                },
+                {
+                    "name":"Agent connection", 
+                    "items":[
+                        {"label":"Agent Host IP  : ", "type":"editbox", "maxlen":15, "valueOffset":25, "placeholder":"XXX.XXX.XXX.XXX", "modelprop":"agentIp", "regex":"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"},
+                        {"label":"Agent SSH Port : ", "type":"editbox", "maxlen":5, "valueOffset":25, "defaultValue":22, "modelprop":"agentPort", "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+                        {"label":"Agent Profile  : ", "type":"editbox", "maxlen":10, "valueOffset":25, "modelprop":"pUser", "placeholder":"Username"},
+                        {"label":"Agent Password : ", "type":"password", "maxlen":10, "valueOffset":25, "modelprop":"pPwd", "placeholder":"XXXXXX"},
+                        {"label":"Connect ", "nextlabel":"  Next  ", "type":"button", "maxlen":32, "modelfunc":"connectAgent", "paramClass":"InstallAgentParam", "output":15}
+                    ]
+                },
+                {
+                    "name":"Config Agent", 
+                    "items":[
+                        {"label":"Server IP         : ", "type":"editbox", "maxlen":15, "valueOffset":25, "modelprop":"REGISTRY_IP", "placeholder":"XXX.XXX.XXX.XXX", "regex":"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"},
+                        {"label":"Registry Port     : ", "type":"editbox", "maxlen":5, "valueOffset":25, "modelprop":"REGISTRY_PORT", "defaultValue":8761, "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+                        {"label":"Agent Username    : ", "type":"editbox", "maxlen":10, "valueOffset":25, "modelprop":"NODE_USERNAME", "placeholder":"Username", "regex":".+"},
+                        {"label":"Agent Password    : ", "type":"password", "maxlen":10, "valueOffset":25, "modelprop":"NODE_PASSWORD", "placeholder":"XXXXXX", "regex":".+"},
+                        {"label":"Agent Server Port : ", "type":"editbox", "maxlen":5, "valueOffset":25, "modelprop":"AGENT_PORT", "defaultValue":8086, "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+                        {"label":"Agent gRPC Port   : ", "type":"editbox", "maxlen":5, "valueOffset":25, "modelprop":"GRPC_PORT", "defaultValue":9090, "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+
+                        {"label":" Deploy ", "nextlabel":" Finish ", "type":"button", "maxlen":32, "modelfunc":"saveProfile", "paramClass":"InstallAgentParam", "output":15}
+                    ]
+                }
+            ]
+        },
+        {
+            "index":3,
+            "name":"3. Uninstall agents",
+            "model":"./tools/uninstall_model.py",
+            "pages":[
+                {
+                    "name":"Uninstall iCluster-web agent",
+                    "items":[
+                        {"label":"Agent IP        : ", "type":"editbox", "maxlen":50, "valueOffset":20, "modelprop":"agentIp", "placeholder":"XXX.XXX.XXX.XXX", "regex":"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"},
+                        {"label":"Agent SSH Port  : ", "type":"editbox", "maxlen":50, "valueOffset":20, "defaultValue":22, "modelprop":"agentPort", "regex":"^([1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"},
+                        {"label":"Agent user      : ", "type":"editbox", "maxlen":10, "valueOffset":20, "defaultValue":"", "modelprop":"pUser", "placeholder":"Username"},
+                        {"label":"Agent passwd    : ", "type":"password", "maxlen":10, "valueOffset":20, "defaultValue":"", "modelprop":"pPwd", "placeholder":"XXXXXX"},
+                        
+                        {"label":"", "type":"dummy"},
+                        {"label":"Remove file     :",  "type":"checkbox", "maxlen":50, "valueOffset":20, "defaultValue":true, "modelprop":"bRemoveAgent"},
+                        {"label":" Execute ", "nextlabel":" Finish  ", "type":"button", "maxlen":32, "modelfunc":"uninstallAgent", "paramClass":"UninstallParam", "output":15}
+                    ]
+                }
+            ]
+        },
+        {
+            "index":4,
+            "name":"4. Uninstall services",
+            "model":"./tools/uninstall_model.py",
+            "pages":[
+                {
+                    "name":"Stop iCluster-web services",
+                    "items":[
+                        {"label":"Service path        : ", "type":"editbox", "editable":false, "maxlen":50, "valueOffset":24, "defaultValue":"/opt/iCluster-web", "modelprop":"servicePath"},
+                        {"label":"Database IP               : ", "type":"editbox", "maxlen":50, "valueOffset":24, "modelprop":"dbIp", "editable": false, "defaultValue": "127.0.0.1", "regex":"^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$"},
+                        {"label":"User                : ", "type":"editbox", "maxlen":10, "valueOffset":24, "defaultValue":"", "modelprop":"pUser", "placeholder":"Username"},
+                        {"label":"Password            : ", "type":"password", "maxlen":10, "valueOffset":24, "defaultValue":"", "modelprop":"pPwd", "placeholder":"XXXXXX"},
+                        
+
+                        {"label":"", "type":"dummy"},
+                        {"label":"Stop Services       :", "type":"label", "maxlen":32},
+                        {"label":"Stop Core Services  :",  "type":"checkbox", "maxlen":50, "valueOffset":24, "defaultValue":true, "modelprop":"bStopJava"},
+                        {"label":"Stop Nginx          :",  "type":"checkbox", "maxlen":50, "valueOffset":24, "defaultValue":false, "modelprop":"bStopNginx"},
+
+                        {"label":"", "type":"dummy"},
+                        {"label":"Data clean options  :", "type":"label", "maxlen":32},
+                        {"label":"Remove iCluster-web :",  "type":"checkbox", "maxlen":50, "valueOffset":24, "defaultValue":true, "modelprop":"bRemoveICW"},
+                        {"label":"Remove DB data      :",  "type":"checkbox", "maxlen":50, "valueOffset":24, "defaultValue":true, "modelprop":"bRemoveDBDATA"},
+
+                        {"label":"Execute ", "nextlabel":"  Next  ", "type":"button", "maxlen":32, "modelfunc":"stopAll", "paramClass":"UninstallParam", "output":15}
+                    ]
+                },
+                {
+                    "name":"Uninstall iCluster-web services",
+                    "items":[
+                        {"label":"Uninstall iCluster-web depends RPMs :",  "type":"checkbox", "maxlen":50, "valueOffset":40, "defaultValue":false, "modelprop":"bDelRpm"},
+                        {"label":"Uninstall Nginx                     :",  "type":"checkbox", "maxlen":50, "valueOffset":40, "defaultValue":false, "modelprop":"bDelNginx"},
+                        {"label":"Delete iCluster conf folder         :",  "type":"checkbox", "maxlen":50, "valueOffset":40, "defaultValue":true, "modelprop":"bDelConf"},
+                        
+                        {"label":" Execute ", "nextlabel":" Finish  ", "type":"button", "maxlen":32, "modelfunc":"delRPM", "paramClass":"UninstallParam", "output":15}
+                    ]
+                }
+            ]
+        }
+    ]
+  }
